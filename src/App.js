@@ -1,25 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import React,{useState} from 'react';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [name,setName]=useState("Mukesh Kumar");
+  	return (
+    	<div className='app'>
+			<div className='name'>
+				<h1>Hi my Name is {name}</h1>
+				<button onClick={()=>setName("sathya")}>sathya</button>
+				<button onClick={()=>setName("avinesh")}>avinesh</button>
+				<button onClick={()=>setName("vijay babu")}>vijay</button>
+			</div>
+    	</div>
+  	);
 }
 
 export default App;
